@@ -6,19 +6,33 @@ export default function Home() {
     <main className="min-h-screen bg-mc-bg-dark">
       {/* Hero Section - Matching Minecraft.net style */}
       <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-mc-bg-dark">
-        {/* Background Image/Pattern */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0 bg-gradient-to-b from-mc-bg-darker via-mc-bg-dark to-mc-bg-darker" />
-        </div>
+        {/* Video Background */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/1764731246532.mp4" type="video/mp4" />
+        </video>
+
+        {/* Dark Overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-mc-bg-darker/80 via-mc-bg-dark/70 to-mc-bg-darker/80" />
 
         {/* Main Content */}
         <div className="relative z-10 text-center px-4 max-w-6xl mx-auto py-20">
-          <h1 className="text-6xl md:text-8xl mb-6 text-mc-text-white minecraft-heading">
-            DISCOVER OUR GAMES
+          <h1 className="text-7xl md:text-9xl lg:text-[10rem] mb-8 minecraft-block-text">
+            ARVR CLUB
           </h1>
-          <p className="text-xl md:text-2xl mb-12 text-mc-text-gray text-body max-w-2xl mx-auto">
-            Get all 3 Minecraft games with the Triple Bundle
-          </p>
+          <div className="mb-12">
+            <p className="text-lg md:text-xl minecraft-block-text-small block mb-1">
+              REALITY CAN BE
+            </p>
+            <p className="text-lg md:text-xl minecraft-block-text-small block">
+              WHATEVER WE WANT
+            </p>
+          </div>
           <div className="flex gap-4 justify-center flex-wrap">
             <Link 
               href="/explore" 
@@ -191,8 +205,8 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="bg-mc-bg-darker text-mc-text-white py-12 text-center border-t border-mc-border-dark">
-        <p className="text-body text-mc-text-gray mb-2">© 2024 Minecraft World - GD-XR</p>
-        <p className="text-sm text-mc-text-dark text-body">Built with Next.js & Optimized Images</p>
+        <p className="text-body text-mc-text-gray mb-2">© 2024 Minecraft World - ARVR</p>
+        <p className="text-sm text-mc-text-dark text-body">Built with Next.js </p>
       </footer>
     </main>
   );

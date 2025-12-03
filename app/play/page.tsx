@@ -14,7 +14,8 @@ const games = [
     gameUrl: 'https://www.crazygames.com/game/bloxd-io',
     embedUrl: 'https://www.crazygames.com/embed/bloxd-io',
     category: 'Adventure',
-    popular: true
+    popular: true,
+    imageUrl: 'https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/Homepage_Discover-our-games_MC-Vanilla-KeyArt_864x864.jpg'
   },
   {
     id: 'miniblox',
@@ -23,7 +24,8 @@ const games = [
     gameUrl: 'https://www.crazygames.com/game/miniblox',
     embedUrl: 'https://www.crazygames.com/embed/miniblox',
     category: 'Adventure',
-    popular: true
+    popular: true,
+    imageUrl: 'https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/logos/Homepage_Discover-our-games_MC-Education-KeyArt_864x864.jpg'
   },
   {
     id: 'poxel',
@@ -32,7 +34,8 @@ const games = [
     gameUrl: 'https://www.crazygames.com/game/poxel-io',
     embedUrl: 'https://www.crazygames.com/embed/poxel-io',
     category: 'Action',
-    popular: true
+    popular: true,
+    imageUrl: 'https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/Homepage_Discover-our-games_MC-Vanilla-KeyArt_864x864.jpg'
   },
   {
     id: 'pixel-warfare',
@@ -41,7 +44,8 @@ const games = [
     gameUrl: 'https://www.crazygames.com/game/pixel-warfare',
     embedUrl: 'https://www.crazygames.com/embed/pixel-warfare',
     category: 'Action',
-    popular: true
+    popular: true,
+    imageUrl: 'https://www.minecraft.net/content/dam/minecraftnet/games/dungeons/key-art/Homepage_Discover-our-games_MC-Dungeons-KeyArt_864x864.jpg'
   },
   {
     id: 'mine-shooter',
@@ -50,7 +54,8 @@ const games = [
     gameUrl: 'https://www.crazygames.com/game/mine-shooter-2-noob-vs-mobs',
     embedUrl: 'https://www.crazygames.com/embed/mine-shooter-2-noob-vs-mobs',
     category: 'Action',
-    popular: true
+    popular: true,
+    imageUrl: 'https://www.minecraft.net/content/dam/minecraftnet/games/dungeons/key-art/Homepage_Discover-our-games_MC-Dungeons-KeyArt_864x864.jpg'
   },
   {
     id: 'voxiom',
@@ -59,7 +64,8 @@ const games = [
     gameUrl: 'https://www.crazygames.com/game/voxiom-io',
     embedUrl: 'https://www.crazygames.com/embed/voxiom-io',
     category: 'Action',
-    popular: true
+    popular: true,
+    imageUrl: 'https://www.minecraft.net/content/dam/minecraftnet/games/badger/key-art/Homepage_Discover-our-games_MC-Legends-KeyArt_864x864.jpg'
   },
   {
     id: 'cube-realm',
@@ -68,7 +74,8 @@ const games = [
     gameUrl: 'https://www.crazygames.com/game/cuberealm-io',
     embedUrl: 'https://www.crazygames.com/embed/cuberealm-io',
     category: 'Adventure',
-    popular: true
+    popular: true,
+    imageUrl: 'https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/Homepage_Discover-our-games_MC-Vanilla-KeyArt_864x864.jpg'
   },
   {
     id: 'build-crush',
@@ -76,7 +83,8 @@ const games = [
     description: 'Multiplayer game where you build and crush structures',
     gameUrl: 'https://www.crazygames.com/game/build-and-crush',
     embedUrl: 'https://www.crazygames.com/embed/build-and-crush',
-    category: 'Action'
+    category: 'Action',
+    imageUrl: 'https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/Homepage_Discover-our-games_MC-Vanilla-KeyArt_864x864.jpg'
   },
   {
     id: 'paper-minecraft',
@@ -84,7 +92,8 @@ const games = [
     description: '2D version of the legendary Minecraft game',
     gameUrl: 'https://www.crazygames.com/game/paper-minecraft',
     embedUrl: 'https://www.crazygames.com/embed/paper-minecraft',
-    category: 'Adventure'
+    category: 'Adventure',
+    imageUrl: 'https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/logos/Homepage_Discover-our-games_MC-Education-KeyArt_864x864.jpg'
   },
   {
     id: 'grindcraft',
@@ -92,7 +101,8 @@ const games = [
     description: 'Minecraft and clicker game elements combined',
     gameUrl: 'https://www.crazygames.com/game/grindcraft',
     embedUrl: 'https://www.crazygames.com/embed/grindcraft',
-    category: 'Casual'
+    category: 'Casual',
+    imageUrl: 'https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/Homepage_Discover-our-games_MC-Vanilla-KeyArt_864x864.jpg'
   },
   {
     id: 'minecraft-td',
@@ -100,7 +110,8 @@ const games = [
     description: 'Addictive tower defense with Minecraft mechanics',
     gameUrl: 'https://www.crazygames.com/game/minecraft-tower-defense',
     embedUrl: 'https://www.crazygames.com/embed/minecraft-tower-defense',
-    category: 'Strategy'
+    category: 'Strategy',
+    imageUrl: 'https://www.minecraft.net/content/dam/minecraftnet/games/badger/key-art/Homepage_Discover-our-games_MC-Legends-KeyArt_864x864.jpg'
   },
   {
     id: 'minecraft-classic',
@@ -109,7 +120,8 @@ const games = [
     gameUrl: 'https://classic.minecraft.net/',
     embedUrl: 'https://classic.minecraft.net/',
     category: 'Classic',
-    popular: true
+    popular: true,
+    imageUrl: 'https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/Homepage_Discover-our-games_MC-Vanilla-KeyArt_864x864.jpg'
   }
 ];
 
@@ -173,13 +185,16 @@ export default function PlayPage() {
                       POPULAR
                     </div>
                   )}
-                  <div className="relative w-full h-48 bg-mc-bg-dark">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-24 h-24 bg-mc-green rounded-lg flex items-center justify-center">
-                        <span className="text-4xl">🎮</span>
-                      </div>
-                    </div>
-                    <div className="absolute bottom-2 right-2 bg-mc-bg-darker px-2 py-1 rounded text-xs text-mc-text-white font-semibold border border-mc-border-dark">
+                  <div className="relative w-full h-48 bg-mc-bg-dark overflow-hidden">
+                    <Image
+                      src={game.imageUrl}
+                      alt={game.name}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-mc-bg-darker via-transparent to-transparent" />
+                    <div className="absolute bottom-2 right-2 bg-mc-bg-darker px-2 py-1 rounded text-xs text-mc-text-white font-semibold border border-mc-border-dark backdrop-blur-sm bg-opacity-80">
                       {game.category}
                     </div>
                   </div>
