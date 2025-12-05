@@ -143,6 +143,138 @@ a:hover {
   line-height: 1.6;
 }
 
+/* Navigation Container - Completely Redesigned */
+.nav-container {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 9999;
+  width: 48px;
+  height: 48px;
+}
+
+/* Navigation Toggle Button - Fixed Position, No Shifting */
+.nav-toggle-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 48px;
+  height: 48px;
+  background-color: #b0b0b0;
+  border: 3px solid #000;
+  border-top-color: #fff;
+  border-left-color: #fff;
+  border-bottom-color: #333;
+  border-right-color: #333;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  outline: none;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.15s ease;
+}
+
+.nav-toggle-btn:hover {
+  background-color: #c0c0c0;
+}
+
+.nav-toggle-btn:active {
+  background-color: #a0a0a0;
+}
+
+.nav-toggle-btn.active {
+  background-color: #a0a0a0;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  width: 24px;
+  height: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+}
+
+.hamburger .line {
+  width: 24px;
+  height: 2px;
+  background-color: #ffffff;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* Navigation Menu */
+.nav-menu {
+  position: absolute;
+  top: 56px;
+  right: 0;
+  background-color: rgba(26, 26, 26, 0.95);
+  border: 3px solid #666;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  min-width: 320px;
+  z-index: 10000;
+}
+
+.nav-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 16px;
+}
+
+/* Navigation Menu Buttons */
+.nav-menu-btn {
+  background-color: #b0b0b0;
+  color: #000;
+  font-family: 'Minecraft Ten', 'Minecraft Seven', monospace;
+  font-size: 13px;
+  font-weight: normal;
+  text-transform: uppercase;
+  padding: 14px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  border: 3px solid #000;
+  border-top-color: #fff;
+  border-left-color: #fff;
+  border-bottom-color: #333;
+  border-right-color: #333;
+  cursor: pointer;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  -webkit-font-smoothing: none;
+  font-smooth: never;
+  letter-spacing: 0.02em;
+  box-shadow: 
+    inset 0 0 0 1px rgba(255, 255, 255, 0.2),
+    0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.1s ease;
+  box-sizing: border-box;
+}
+
+.nav-menu-btn:hover {
+  background-color: #c0c0c0;
+}
+
+.nav-menu-btn:active {
+  background-color: #a0a0a0;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
 /* 3D Block Text Effect - Matching GDXR Logo Style */
 .minecraft-block-text {
   font-family: 'Minecraft Ten', 'Minecraft Seven', monospace;
