@@ -1,30 +1,36 @@
+'use client';
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Home() {
+  const [activeSection, setActiveSection] = useState<'vision' | 'mission' | 'values'>('mission');
   return (
-    <main className="min-h-screen bg-mc-bg-dark">
+    <main className="min-h-screen bg-mc-bg-dark m-0 p-0" style={{ margin: 0, padding: 0 }}>
       {/* Hero Section - Matching Minecraft.net style */}
-      <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-mc-bg-dark">
+      <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-mc-bg-dark" style={{ margin: 0, padding: 0, marginTop: 0, height: '100vh' }}>
         {/* Video Background */}
-        <iframe
-          src="https://player.cloudinary.com/embed/?cloud_name=doqemxyul&public_id=1764731246532_gulplc&profile=cld-default&autoplay=true&loop=true&muted=true"
+        <video
+          src="/1764731246532.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
           className="absolute inset-0 w-full h-full object-cover"
-          allow="autoplay; fullscreen; encrypted-media"
-          style={{ border: 'none', pointerEvents: 'none' }}
-          allowFullScreen
+          style={{ border: 'none', pointerEvents: 'none', width: '100%', height: '100%', position: 'absolute', top: 0, left: 0, zIndex: 0 }}
         />
 
         {/* Dark Overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-mc-bg-darker/80 via-mc-bg-dark/70 to-mc-bg-darker/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-mc-bg-darker/80 via-mc-bg-dark/70 to-mc-bg-darker/80" style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0, zIndex: 1 }} />
 
         {/* Logo in top left corner */}
-        <div className="absolute top-4 left-4 md:top-8 md:left-8 z-20">
+        <div className="absolute top-1 left-1 md:top-2 md:left-2 z-20">
           <Image
             src="https://res.cloudinary.com/doqemxyul/image/upload/v1764830587/Group_1000012422_vxpwwx.png"
             alt="Logo"
-            width={90}
-            height={45}
+            width={60}
+            height={30}
             className="h-auto pixelated"
             priority
           />
@@ -71,7 +77,7 @@ export default function Home() {
       </section>
 
       {/* About Us Section - Window Style UI */}
-      <section className="relative w-full min-h-screen">
+      <section className="relative w-full min-h-screen" style={{ margin: 0, padding: 0, marginTop: 0, display: 'block' }}>
         {/* Background Image - Full Coverage */}
         <div className="absolute inset-0 w-full h-full">
           <Image
@@ -128,7 +134,10 @@ export default function Home() {
             <div className="window-content">
               {/* Left Panel - Vision, Mission, Values */}
               <div className="window-left-panel">
-                <button className="window-menu-item">
+                <button 
+                  className={`window-menu-item ${activeSection === 'vision' ? 'active' : ''}`}
+                  onClick={() => setActiveSection('vision')}
+                >
                   <div className="menu-item-icon">
                     <Image
                       src="/b4a667e209bce74395c7aecef032e075 1.png"
@@ -140,7 +149,10 @@ export default function Home() {
                   </div>
                   <span className="menu-item-text">Vision</span>
                 </button>
-                <button className="window-menu-item">
+                <button 
+                  className={`window-menu-item ${activeSection === 'mission' ? 'active' : ''}`}
+                  onClick={() => setActiveSection('mission')}
+                >
                   <div className="menu-item-icon mission-logo-container">
                     <Image
                       src="/e4b7a42853ca0dff791824b373f89d11 1.png"
@@ -152,7 +164,10 @@ export default function Home() {
                   </div>
                   <span className="menu-item-text">Mission</span>
                 </button>
-                <button className="window-menu-item">
+                <button 
+                  className={`window-menu-item ${activeSection === 'values' ? 'active' : ''}`}
+                  onClick={() => setActiveSection('values')}
+                >
                   <div className="menu-item-icon">
                     <Image
                       src="/316e600903a67eb9d0ffcf602ddb25b6 1.png"
@@ -166,11 +181,25 @@ export default function Home() {
                 </button>
               </div>
 
-              {/* Right Panel - Mission Statement */}
+              {/* Right Panel - Dynamic Content */}
               <div className="window-right-panel">
                 <div className="mission-text-box">
                   <p className="mission-text">
-                    To build a community where XR and Game Developers grow together through collaboration and shared learning.
+                    {activeSection === 'vision' && (
+                      <>To build a community where XR and Game Developers grow together through collaboration and shared learning.</>
+                    )}
+                    {activeSection === 'mission' && (
+                      <>
+                        Create an environment where a positive and supportive culture is nurtured, helping members accelerate their personal and professional growth.
+                        <br /><br />
+                        Assist members in developing projects that contribute to the club's reputation and standing.
+                        <br /><br />
+                        Facilitate interactions with similar communities from other colleges to share knowledge and collaborate.
+                      </>
+                    )}
+                    {activeSection === 'values' && (
+                      <>Our values are rooted in collaboration, innovation, and continuous learning. We foster a supportive, respectful culture where every member is encouraged to grow. We are committed to creating high-quality projects, sharing knowledge with the community, and building meaningful connections. Guided by integrity and curiosity, we push creative boundaries in XR and Game Development together.</>
+                    )}
                   </p>
                 </div>
               </div>
