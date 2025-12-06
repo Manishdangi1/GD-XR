@@ -7,32 +7,52 @@ export default function Home() {
       {/* Hero Section - Matching Minecraft.net style */}
       <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-mc-bg-dark">
         {/* Video Background */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
+        <iframe
+          src="https://player.cloudinary.com/embed/?cloud_name=doqemxyul&public_id=1764731246532_gulplc&profile=cld-default&autoplay=true&loop=true&muted=true"
           className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source src="/1764731246532.mp4" type="video/mp4" />
-        </video>
+          allow="autoplay; fullscreen; encrypted-media"
+          style={{ border: 'none', pointerEvents: 'none' }}
+          allowFullScreen
+        />
 
         {/* Dark Overlay for better text readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-mc-bg-darker/80 via-mc-bg-dark/70 to-mc-bg-darker/80" />
 
+        {/* Logo in top left corner */}
+        <div className="absolute top-4 left-4 md:top-8 md:left-8 z-20">
+          <Image
+            src="https://res.cloudinary.com/doqemxyul/image/upload/v1764830587/Group_1000012422_vxpwwx.png"
+            alt="Logo"
+            width={90}
+            height={45}
+            className="h-auto pixelated"
+            priority
+          />
+        </div>
+
         {/* Main Content */}
-        <div className="relative z-10 text-center px-4 max-w-6xl mx-auto py-20">
-          <h1 className="text-7xl md:text-9xl lg:text-[10rem] mb-8 minecraft-block-text">
-            ARVR CLUB
-          </h1>
-          <div className="mb-12">
-            <p className="text-lg md:text-xl minecraft-block-text-small block mb-1">
-              REALITY CAN BE
-            </p>
-            <p className="text-lg md:text-xl minecraft-block-text-small block">
-              WHATEVER WE WANT
-            </p>
+        <div className="relative z-10 text-center px-4 max-w-6xl mx-auto py-20 -mt-40">
+          <div className="flex flex-col items-center gap-0">
+            <Image
+              src="https://res.cloudinary.com/doqemxyul/image/upload/v1764830588/ChatGPT_Image_Dec_3_2025_10_25_20_PM_ckbsbm.png"
+              alt="ARVR CLUB"
+              width={600}
+              height={150}
+              className="w-full max-w-3xl h-auto pixelated block m-0 p-0"
+              style={{ marginBottom: 0 }}
+              priority
+            />
+            <Image
+              src="https://res.cloudinary.com/doqemxyul/image/upload/v1764830587/bc88c4e1-0799-4ed6-acd9-46adc26b998b_1_layerstyle_cdutgj.png"
+              alt="REALITY CAN BE WHATEVER WE WANT"
+              width={700}
+              height={150}
+              className="w-full max-w-2xl h-auto pixelated block m-0 p-0"
+              style={{ marginTop: '-190px' }}
+              priority
+            />
           </div>
+          <div className="mb-12"></div>
           <div className="flex gap-4 justify-center flex-wrap">
             <Link 
               href="/explore" 
@@ -46,6 +66,115 @@ export default function Home() {
             >
               PLAY
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* About Us Section - Window Style UI */}
+      <section className="relative w-full min-h-screen">
+        {/* Background Image - Full Coverage */}
+        <div className="absolute inset-0 w-full h-full">
+          <Image
+            src="/8d169005389a6a17d38e8e059f24644c 1@2x.png"
+            alt="About section background"
+            fill
+            className="object-cover"
+            sizes="100vw"
+            priority
+          />
+        </div>
+        
+        <div className="container mx-auto px-4 max-w-7xl relative z-10 py-20 min-h-screen flex items-center">
+          <div className="minecraft-window w-full">
+            {/* Window Title Bar */}
+            <div className="window-title-bar">
+              <div className="window-title-left">
+                <div className="window-icon">
+                  <Image
+                    src="/Group 1000012422 2.png"
+                    alt="About Us icon"
+                    width={48}
+                    height={48}
+                    className="pixelated"
+                  />
+                </div>
+              </div>
+              <div className="window-title-center">
+                <h2 className="window-title-text">ABOUT US</h2>
+              </div>
+              <div className="window-title-right">
+                <div className="window-icon window-control">
+                  <Image
+                    src="/1737d5e028e7ecb7605da2756202440f 1.png"
+                    alt="Minimize"
+                    width={40}
+                    height={40}
+                    className="pixelated"
+                  />
+                </div>
+                <div className="window-icon window-control">
+                  <Image
+                    src="/843b6b77f46c1c3a69091d13fa9593d7 1.png"
+                    alt="Close"
+                    width={40}
+                    height={40}
+                    className="pixelated"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Window Content */}
+            <div className="window-content">
+              {/* Left Panel - Vision, Mission, Values */}
+              <div className="window-left-panel">
+                <button className="window-menu-item">
+                  <div className="menu-item-icon">
+                    <Image
+                      src="/b4a667e209bce74395c7aecef032e075 1.png"
+                      alt="Vision logo"
+                      width={64}
+                      height={64}
+                      className="pixelated"
+                    />
+                  </div>
+                  <span className="menu-item-text">Vision</span>
+                </button>
+                <button className="window-menu-item">
+                  <div className="menu-item-icon mission-logo-container">
+                    <Image
+                      src="/e4b7a42853ca0dff791824b373f89d11 1.png"
+                      alt="Mission logo"
+                      width={96}
+                      height={96}
+                      className="pixelated"
+                    />
+                  </div>
+                  <span className="menu-item-text">Mission</span>
+                </button>
+                <button className="window-menu-item">
+                  <div className="menu-item-icon">
+                    <Image
+                      src="/316e600903a67eb9d0ffcf602ddb25b6 1.png"
+                      alt="Values logo"
+                      width={64}
+                      height={64}
+                      className="pixelated"
+                    />
+                  </div>
+                  <span className="menu-item-text">Values</span>
+                </button>
+              </div>
+
+              {/* Right Panel - Mission Statement */}
+              <div className="window-right-panel">
+                <div className="mission-text-box">
+                  <p className="mission-text">
+                    To build a community where XR and Game Developers grow together through collaboration and shared learning.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
