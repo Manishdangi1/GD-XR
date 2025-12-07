@@ -6,6 +6,36 @@ import { useState } from "react";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState<'vision' | 'mission' | 'values'>('mission');
+  const [activeEvent, setActiveEvent] = useState<number>(0);
+
+  // Sample events data
+  const events = [
+    {
+      id: 1,
+      title: 'XR Workshop Series',
+      date: 'January 15, 2025',
+      description: 'Join us for an immersive workshop series covering AR/VR development fundamentals, Unity basics, and hands-on project building. Perfect for beginners and intermediate developers.',
+      location: 'Tech Lab, Building A',
+      time: '2:00 PM - 5:00 PM',
+    },
+    {
+      id: 2,
+      title: 'Game Jam 2025',
+      date: 'February 10-12, 2025',
+      description: '48-hour game development competition. Form teams, build innovative games, and compete for prizes. Open to all skill levels. Food and drinks provided.',
+      location: 'Main Campus',
+      time: 'Friday 6:00 PM - Sunday 6:00 PM',
+    },
+    {
+      id: 3,
+      title: 'Industry Speaker Series',
+      date: 'March 5, 2025',
+      description: 'Hear from industry professionals working in XR and Game Development. Learn about career paths, industry trends, and get networking opportunities.',
+      location: 'Auditorium Hall',
+      time: '4:00 PM - 6:00 PM',
+    },
+  ];
+
   return (
     <main className="min-h-screen bg-mc-bg-dark m-0 p-0" style={{ margin: 0, padding: 0 }}>
       {/* Hero Section - Matching Minecraft.net style */}
@@ -201,6 +231,112 @@ export default function Home() {
                       <>Our values are rooted in collaboration, innovation, and continuous learning. We foster a supportive, respectful culture where every member is encouraged to grow. We are committed to creating high-quality projects, sharing knowledge with the community, and building meaningful connections. Guided by integrity and curiosity, we push creative boundaries in XR and Game Development together.</>
                     )}
                   </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Events Section - Window Style UI */}
+      <section className="relative w-full min-h-screen" style={{ margin: 0, padding: 0, marginTop: 0, display: 'block' }}>
+        {/* Background Image - Full Coverage */}
+        <div className="absolute inset-0 w-full h-full">
+          <Image
+            src="/8d169005389a6a17d38e8e059f24644c 1@2x.png"
+            alt="Events section background"
+            fill
+            className="object-cover"
+            sizes="100vw"
+            priority
+          />
+        </div>
+        
+        <div className="container mx-auto px-4 max-w-7xl relative z-10 py-20 min-h-screen flex items-center">
+          <div className="minecraft-window w-full">
+            {/* Window Title Bar */}
+            <div className="window-title-bar">
+              <div className="window-title-left">
+                <div className="window-icon">
+                  <Image
+                    src="/Group 1000012422 2.png"
+                    alt="Events icon"
+                    width={48}
+                    height={48}
+                    className="pixelated"
+                  />
+                </div>
+              </div>
+              <div className="window-title-center">
+                <h2 className="window-title-text">EVENTS</h2>
+              </div>
+              <div className="window-title-right">
+                <div className="window-icon window-control">
+                  <Image
+                    src="/1737d5e028e7ecb7605da2756202440f 1.png"
+                    alt="Minimize"
+                    width={40}
+                    height={40}
+                    className="pixelated"
+                  />
+                </div>
+                <div className="window-icon window-control">
+                  <Image
+                    src="/843b6b77f46c1c3a69091d13fa9593d7 1.png"
+                    alt="Close"
+                    width={40}
+                    height={40}
+                    className="pixelated"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Window Content */}
+            <div className="window-content">
+              {/* Left Panel - Event List */}
+              <div className="window-left-panel">
+                {events.map((event, index) => (
+                  <button 
+                    key={event.id}
+                    className={`window-menu-item ${activeEvent === index ? 'active' : ''}`}
+                    onClick={() => setActiveEvent(index)}
+                  >
+                    <div className="menu-item-icon">
+                      <span style={{ fontSize: '32px' }}>📅</span>
+                    </div>
+                    <span className="menu-item-text">{event.title}</span>
+                  </button>
+                ))}
+              </div>
+
+              {/* Right Panel - Event Details */}
+              <div className="window-right-panel">
+                <div className="mission-text-box">
+                  <div className="mission-text">
+                    <h3 style={{ 
+                      fontFamily: "'Minecraft Ten', 'Minecraft Seven', monospace",
+                      fontSize: '32px',
+                      color: '#000',
+                      marginBottom: '20px',
+                      textTransform: 'uppercase',
+                      fontWeight: 'normal'
+                    }}>
+                      {events[activeEvent].title}
+                    </h3>
+                    <p style={{ marginBottom: '16px' }}>
+                      <strong style={{ color: '#000' }}>Date:</strong> {events[activeEvent].date}
+                    </p>
+                    <p style={{ marginBottom: '16px' }}>
+                      <strong style={{ color: '#000' }}>Time:</strong> {events[activeEvent].time}
+                    </p>
+                    <p style={{ marginBottom: '16px' }}>
+                      <strong style={{ color: '#000' }}>Location:</strong> {events[activeEvent].location}
+                    </p>
+                    <p style={{ marginTop: '24px' }}>
+                      {events[activeEvent].description}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
