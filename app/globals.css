@@ -508,6 +508,30 @@ a:hover {
   font-weight: normal;
 }
 
+.event-title {
+  font-family: 'Minecraft Ten', 'Minecraft Seven', monospace;
+  font-size: 32px;
+  color: #000;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: normal;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: unset;
+  font-smooth: never;
+  text-rendering: optimizeSpeed;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  letter-spacing: 0.05em;
+  text-shadow: none;
+}
+
+.mission-text strong {
+  color: #000;
+  font-weight: normal;
+  font-family: 'Minecraftia', 'Minecraft Ten', 'Minecraft Seven', monospace;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .window-content {

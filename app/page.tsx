@@ -314,24 +314,17 @@ export default function Home() {
               <div className="window-right-panel">
                 <div className="mission-text-box">
                   <div className="mission-text">
-                    <h3 style={{ 
-                      fontFamily: "'Minecraft Ten', 'Minecraft Seven', monospace",
-                      fontSize: '32px',
-                      color: '#000',
-                      marginBottom: '20px',
-                      textTransform: 'uppercase',
-                      fontWeight: 'normal'
-                    }}>
+                    <h3 className="event-title">
                       {events[activeEvent].title}
                     </h3>
                     <p style={{ marginBottom: '16px' }}>
-                      <strong style={{ color: '#000' }}>Date:</strong> {events[activeEvent].date}
+                      <strong>Date:</strong> {events[activeEvent].date}
                     </p>
                     <p style={{ marginBottom: '16px' }}>
-                      <strong style={{ color: '#000' }}>Time:</strong> {events[activeEvent].time}
+                      <strong>Time:</strong> {events[activeEvent].time}
                     </p>
                     <p style={{ marginBottom: '16px' }}>
-                      <strong style={{ color: '#000' }}>Location:</strong> {events[activeEvent].location}
+                      <strong>Location:</strong> {events[activeEvent].location}
                     </p>
                     <p style={{ marginTop: '24px' }}>
                       {events[activeEvent].description}
