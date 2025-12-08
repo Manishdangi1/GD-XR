@@ -532,6 +532,37 @@ a:hover {
   font-family: 'Minecraftia', 'Minecraft Ten', 'Minecraft Seven', monospace;
 }
 
+/* Background Image Transitions */
+.bg-image-container {
+  transition: opacity 0.8s ease-in-out;
+  animation: fadeInBackground 1s ease-in-out;
+}
+
+.bg-image-container img {
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  animation: fadeInImage 1s ease-in-out;
+}
+
+@keyframes fadeInBackground {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInImage {
+  from {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .window-content {

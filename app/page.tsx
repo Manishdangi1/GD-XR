@@ -109,7 +109,7 @@ export default function Home() {
       {/* About Us Section - Window Style UI */}
       <section className="relative w-full min-h-screen" style={{ margin: 0, padding: 0, marginTop: 0, display: 'block' }}>
         {/* Background Image - Full Coverage */}
-        <div className="absolute inset-0 w-full h-full">
+        <div className="absolute inset-0 w-full h-full bg-image-container">
           <Image
             src="/8d169005389a6a17d38e8e059f24644c 1@2x.png"
             alt="About section background"
@@ -241,7 +241,7 @@ export default function Home() {
       {/* Events Section - Window Style UI */}
       <section className="relative w-full min-h-screen" style={{ margin: 0, padding: 0, marginTop: 0, display: 'block' }}>
         {/* Background Image - Full Coverage */}
-        <div className="absolute inset-0 w-full h-full">
+        <div className="absolute inset-0 w-full h-full bg-image-container">
           <Image
             src="/8d169005389a6a17d38e8e059f24644c 1@2x.png"
             alt="Events section background"
